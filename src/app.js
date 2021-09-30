@@ -13,6 +13,7 @@ app.use(express.json());
 
 // routes
 app.use("/destinatarios", require("./routes/destinatarios.js"));
+app.use("/guiasremision", require("./routes/guia_remision"));
 
 app.listen(
     app.get("port"),
