@@ -1,0 +1,29 @@
+[
+    {
+        "nroDest": 1,
+        "nombres": "Angello",
+        "apellidos": "Aguilar",
+        "ruc": "10123456789",
+        "tipoDoc": "DNI",
+        "nroDocIdent": "73858499"
+    },
+    {
+        "nroDest": 2,
+        "nombres": "Sandro",
+        "apellidos": "Flores",
+        "tipoDoc": "DNI",
+        "nroDocIdent": "40015267"
+    },
+    {
+        "nroDest": 3,
+        "nombres": "Jesús",
+        "apellidos": "Gamez",
+        "tipoDoc": "CarExt",
+        "nroDocIdent": "0002164494"
+    },
+    {
+        "nroDest": 4,
+        "razonSocial": "Nico Luminarias EIRL",
+        "ruc": "20123456789"
+    }
+]

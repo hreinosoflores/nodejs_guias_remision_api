@@ -1,0 +1,83 @@
+[
+    {
+        "nroGuiaRem": 1,
+        "fecEmision": "2021-09-08",
+        "fecTraslado": "2021-09-20",
+        "dirPartida": "Av Colonial 2050 Lima",
+        "dirLlegada": "Av Naciones Unidas 340",
+        "destinatario": 1,
+        "vehiculo": 1,
+        "conductor": 1,
+        "comprobante": 1,
+        "motivo": 1,
+        "transportista": 1,
+        "firmado": false,
+        "clienteConforme": false,
+        "detalles": [
+            {
+                "nroProd": 1,
+                "cantPedida": 4,
+                "pesoTotal": 4.45
+            },
+            {
+                "nroProd": 2,
+                "cantPedida": 3,
+                "pesoTotal": 4
+            },
+            {
+                "nroProd": 3,
+                "cantPedida": 2,
+                "pesoTotal": 6.57
+            }
+        ]
+    },
+    {
+        "nroGuiaRem": 2,
+        "fecEmision": "2021-09-08",
+        "fecTraslado": "2021-09-14",
+        "dirPartida": "Av Colonial 2050 Lima",
+        "dirLlegada": "Jr Paruro 830 Mesa Redonda",
+        "destinatario": 3,
+        "vehiculo": 3,
+        "conductor": 3,
+        "comprobante": 2,
+        "motivo": 5,
+        "transportista": 2,
+        "firmado": false,
+        "clienteConforme": false,
+        "detalles": [
+            {
+                "nroProd": 4,
+                "cantPedida": 10,
+                "pesoTotal": 50.63
+            }
+        ]
+    },
+    {
+        "nroGuiaRem": 3,
+        "fecEmision": "2021-09-10",
+        "fecTraslado": "2021-10-04",
+        "dirPartida": "CC Plaza Ferretero",
+        "dirLlegada": "Av De la Peruanidad Huancayo",
+        "destinatario": 4,
+        "vehiculo": 3,
+        "conductor": 1,
+        "comprobante": 3,
+        "motivo": 3,
+        "transportista": 1,
+        "firmado": true,
+        "clienteConforme": true,
+        "detalles": [
+            {
+                "nroProd": 3,
+                "cantPedida": 23,
+                "pesoTotal": 116.50
+            },
+            {
+                "nroProd": 4,
+                "cantPedida": 8,
+                "pesoTotal": 34.40
+            }
+        ]
+    }
+]

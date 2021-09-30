@@ -1,0 +1,20 @@
+[
+    {
+        "nroVehi": 1,
+        "marca": "Toyota",
+        "placa": "RTY-078",
+        "nroCertInscMTC": "721-2015-MTC/15"
+    },
+    {
+        "nroVehi": 2,
+        "marca": "Nissan",
+        "placa": "DT5-078",
+        "nroCertInscMTC": "1686-2009-MTC/15"
+    },
+    {
+        "nroVehi": 3,
+        "marca": "Toyota",
+        "placa": "ADO-544",
+        "nroCertInscMTC": "168-2019-MTC/17.03"
+    }
+]

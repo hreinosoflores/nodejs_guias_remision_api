@@ -1,0 +1,19 @@
+[
+    {
+        "nroTransp": 1,
+        "nombres": "Joe",
+        "apellidos": "MacMillan",
+        "razonSocial": "",
+        "ruc": "10473580887"
+    },
+    {
+        "nroTransp": 2,
+        "razonSocial": "CENTRO DE INSPECCIONES TECNICAS VEHICULARES DEL PERU SAC - CIPESAC",
+        "ruc": "20789400158"
+    },
+    {
+        "nroTransp": 3,
+        "razonSocial": "SGM INGENIEROS E.I.R.L.",
+        "ruc": "20255566900"
+    }
+]

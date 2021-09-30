@@ -1,0 +1,35 @@
+Sin Normailizar
+    GuiaRem (nroGuiaRem, fecEmision, fecTraslado, dirPartida, dirLlegada, ape/nom/rs Destinatario, ruc Destinatario, tipo/nroDocIdent Destinatario, marca/placa Vehiculo, nroCertInscMTC, nroLicCondu, tipoComprob, nroComprob, cantPedida, descr, pesoTotal, motivo, ape/nom/rs Transp, rucTransp, firma, conformidadCliente, nombreCliente)
+
+Primera forma normal
+    Encabezado_GuiaRem (nroGuiaRem, fecEmision, fecTraslado, dirPartida, dirLlegada, ape/nom/rs Destinatario, ruc Destinatario, tipo/nroDocIdent Destinatario, marca/placa Vehiculo, nroCertInscMTC, nroLicCondu, tipoComprob, nroComprob, motivo, ape/nom/rs Transp, rucTransp, firma, conformidadCliente, nombreCliente)
+    
+    Detalle_GuiaRem (cantPedida, descr, pesoTotal)
+
+Segunda forma normal
+
+    Encabezado_GuiaRem (nroGuiaRem, fecEmision, fecTraslado, dirPartida, dirLlegada, ape/nom/rs Destinatario, ruc Destinatario, tipo/nroDocIdent Destinatario, marca/placa Vehiculo, nroCertInscMTC, nroLicCondu, tipoComprob, nroComprob, motivo, ape/nom/rs Transp, rucTransp, firma, conformidadCliente, nombreCliente)
+    
+    Detalle_GuiaRem (nroGuiaRem, nroProd, cantPedida, pesoTotal)
+    
+    Producto (nroProd, descr)
+
+Tercera forma normal
+
+    Encabezado_GuiaRem (nroGuiaRem, fecEmision, fecTraslado, dirPartida, dirLlegada, destinatario, vehiculo, conductor, comprobante, motivo, transportista, firmado, clienteConforme)
+    
+    Destinatario/Cliente  (nroDest, nombres, apellidos, razonSocial, ruc, tipoDoc, nroDocIdent)
+    
+    Vehiculo (nroVehi, marca, placa, nroCertInscMTC)
+    
+    Conductor (nroCondu, nroLicCondu)
+    
+    Comprobante  (nroComprob, tipoComprob)
+    
+    Motivo (nroMotivo, descr)
+    
+    Transportista (nroTransp, nombres, apellidos, razonSocial, ruc)
+    
+    Detalle_GuiaRem (nroGuiaRem, nroProd, cantPedida, pesoTotal)
+    
+    Producto  (nroProd, descr)

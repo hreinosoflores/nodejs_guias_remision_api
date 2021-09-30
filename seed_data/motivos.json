@@ -1,0 +1,22 @@
+[
+    {
+        "nroMotivo": 1,
+        "descr": "Venta"
+    },
+    {
+        "nroMotivo": 2,
+        "descr": "Compra"
+    },
+    {
+        "nroMotivo": 3,
+        "descr": "Devolución"
+    },
+    {
+        "nroMotivo": 4,
+        "descr": "Traslado de bienes para transformación"
+    },
+    {
+        "nroMotivo": 5,
+        "descr": "Importación"
+    }
+]
