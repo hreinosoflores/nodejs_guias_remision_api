@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const
-    DestinatarioModel = require("../libs/model_factory.js")("destinatarioObj", "destinatarios");
+const DestinatarioModel = require("../libs/model_factory.js")("destinatarioObj", "destinatarios");
 
 router.get("/", (req, res) => {
     DestinatarioModel.find()

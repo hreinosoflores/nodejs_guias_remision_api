@@ -1,12 +1,36 @@
 const express = require("express");
 const router = express.Router();
 
-const
-    GuiaModel = require("../libs/model_factory.js")("guiaObj", "guias");
+const GuiaModel = require("../libs/model_factory.js")("guiaObj", "guias");
+
+// Generar nueva Guía de Remisión
+router.post("/add", (req, res) => {
+    let body = req.body;
+    GuiaModel.find().sort({ "nroGuiaRem": -1 }).limit(1)
+        .then(
+            guias => {
+                body.nroGuiaRem = guias[0].nroGuiaRem + 1;
+                if (body.detalles.length == 0)
+                    res.send("Guía debe tener por lo menos un detalle en su lista.");
+                else
+                    GuiaModel.create(body)
+                        .then(
+                            guia => res.json(guia)
+                        )
+                        .catch(
+                            e => console.log("Error !!", e)
+                        );
+            }
+        )
+        .catch(
+            e => console.log("Error !!", e)
+        );
+});
+
 
 // Borrar Guía
 router.delete("/delete/:nroGuiaRem", (req, res) => {
-    GuiaModel.deleteOne({ "nroDest": req.params.nroGuiaRem })
+    GuiaModel.deleteOne({ "nroGuiaRem": req.params.nroGuiaRem })
         .then(
             response => res.json(response)
         )
@@ -35,26 +59,6 @@ router.delete("/delete/:nroGuiaRem", (req, res) => {
 //     ).exec()
 //         .then(
 //             guia => res.json(guia)
-//         )
-//         .catch(
-//             e => console.log("Error !!", e)
-//         );
-// });
-
-// router.post("/add", (req, res) => {
-//     let body = req.body;
-//     DestinatarioModel.find().sort({ "nroDest": -1 }).limit(1)
-//         .then(
-//             destinatarios => {
-//                 body.nroDest = destinatarios[0].nroDest + 1;
-//                 DestinatarioModel.create(body)
-//                     .then(
-//                         destinatario => res.json(destinatario)
-//                     )
-//                     .catch(
-//                         e => console.log("Error !!", e)
-//                     );
-//             }
 //         )
 //         .catch(
 //             e => console.log("Error !!", e)
