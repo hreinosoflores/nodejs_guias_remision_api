@@ -22,21 +22,28 @@ router.post("/add", (req, res) => {
                         );
             }
         )
-        .catch(
-            e => console.log("Error !!", e)
-        );
+        .catch(e => console.log("Error !!", e));
 });
 
+// Guía firmada
+router.patch("/firmar/:nroGuiaRem", (req, res) => {
+    GuiaModel.updateOne({ "nroGuiaRem": req.params.nroGuiaRem }, { "firmado": true })
+        .then(response => res.json(response))
+        .catch(e => console.log("Error !!", e));
+});
+
+// Conformidad Cliente
+router.patch("/conforme/:nroGuiaRem", (req, res) => {
+    GuiaModel.updateOne({ "nroGuiaRem": req.params.nroGuiaRem }, { "clienteConforme": true })
+        .then(response => res.json(response))
+        .catch(e => console.log("Error !!", e));
+});
 
 // Borrar Guía
 router.delete("/delete/:nroGuiaRem", (req, res) => {
     GuiaModel.deleteOne({ "nroGuiaRem": req.params.nroGuiaRem })
-        .then(
-            response => res.json(response)
-        )
-        .catch(
-            e => console.log("Error !!", e)
-        );
+        .then(response => res.json(response))
+        .catch(e => console.log("Error !!", e));
 });
 
 // router.get("/:nroGuiaRem", (req, res) => {
