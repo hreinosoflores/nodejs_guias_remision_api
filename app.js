@@ -12,10 +12,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // routes
-app.use("/destinatarios", require("./routes/destinatarios.js"));
-app.use("/guiasremision", require("./routes/guia_remision"));
+app.use("/destinatarios", require("./src/routes/destinatarios"));
+app.use("/guiasremision", require("./src/routes/guia_remision"));
 
 app.listen(
     app.get("port"),
-    () => console.log("server on port ", app.get("port"))
+    () => {
+        console.log(`SERVER UP ON PORT ${app.get("port")}!!`);
+    }
 );

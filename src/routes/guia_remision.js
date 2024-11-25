@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const global = require("../libs/global.js");
 const mongoose = require("mongoose");
+mongoose.set("strictQuery", true);
 
 const GuiaModel = require("../libs/model_factory.js")("guiaObj", "guias");
 

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+mongoose.set("strictQuery", true);
 const global = require("./global.js");
 
 module.exports = function (obj, name) {
