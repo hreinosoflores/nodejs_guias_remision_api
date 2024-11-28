@@ -1,12 +1,11 @@
-const mongoose = require("mongoose");
-mongoose.set("strictQuery", true);
-const global = require("./global.js");
+import { set, Schema, model } from "mongoose";
+import { schemas, collNames } from "./global.js";
+import db_conn from "./db_conn.js";
 
-module.exports = function (obj, name) {
-    require("./db_conn.js")();
-    var schema = mongoose.Schema(
-        global.schemas[obj],
-        global.schemas.options(global.collNames[name])
-    );
-    return mongoose.model(global.collNames[name], schema);
-};
+set("strictQuery", true);
+
+export default function (obj, name) {
+  db_conn();
+  var schema = Schema(schemas[obj], schemas.options(collNames[name]));
+  return model(collNames[name], schema);
+}
